@@ -22,6 +22,19 @@ self.addEventListener('install', (event) => {
           '/views/productos.html',
           '/views/politicas.html',
           '/views/preguntas.html',
+          '/manifest.json',
+          '/sw.js',
+          '/img/1.jpg',
+          '/img/2.jpg',
+          '/img/3.jpg',
+          '/icons/maskable_icon_x48.png',
+          '/icons/maskable_icon_x72.png',
+          '/icons/maskable_icon_x96.png',
+          '/icons/maskable_icon_x128.png',
+          '/icons/maskable_icon_x192.png',
+          '/icons/maskable_icon_x384.png',
+          '/icons/maskable_icon_x512.png',
+          '/icons/maskable_icon.png',
           // Agrega aquí todos los archivos que quieres cachear
         ]);
       })
