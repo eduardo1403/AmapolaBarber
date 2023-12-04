@@ -9,6 +9,8 @@ self.addEventListener('install', (event) => {
         return cache.addAll([
           '/',
           '/index.html',
+          '/manifest.json',
+          '/sw.js',
           '/css/acerca.css',
           '/css/index.css',
           '/img/banner.jpg',
@@ -22,8 +24,6 @@ self.addEventListener('install', (event) => {
           '/views/productos.html',
           '/views/politicas.html',
           '/views/preguntas.html',
-          '/manifest.json',
-          '/sw.js',
           '/img/1.jpg',
           '/img/2.jpg',
           '/img/3.jpg',
