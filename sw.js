@@ -21,6 +21,7 @@ self.addEventListener('install', (event) => {
           '/views/registro.html',
           '/views/productos.html',
           '/views/politicas.html',
+          '/views/preguntas.html',
           // Agrega aquí todos los archivos que quieres cachear
         ]);
       })
