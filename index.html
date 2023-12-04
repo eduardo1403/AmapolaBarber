@@ -173,13 +173,27 @@
   </section>
       
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+      <script>
+        // Función para mostrar la notificación
+        function mostrarNotificacion() {
+            // Verifica si la API de notificaciones está disponible en el navegador
+            if ('Notification' in window && Notification.permission === 'granted') {
+                // Crea y muestra la notificación
+                const options = {
+                    body: 'Bienvenido a Barberia Amapola',
+                    icon: 'img/noti.jpg'
+                };
+
+                const notification = new Notification('Hola!!', options);
+
+                // Puedes agregar más lógica aquí para manejar la interacción con la notificación si es necesario
+                console.log('El usuario hizo clic en la notificación');
+            }
+        }
+    </script>
+
 </body>
-<script>
-  
-function mostrarNotificacion() {
-        console.log('El usuario hizo clic en la notificación')
-  }
-</script>
 
 <script>
   if ('Notification' in window && Notification.permission !== 'denied') {
