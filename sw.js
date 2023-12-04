@@ -35,6 +35,7 @@ self.addEventListener('install', (event) => {
           '/icons/maskable_icon_x384.png',
           '/icons/maskable_icon_x512.png',
           '/icons/maskable_icon.png',
+          '/js/app.js'
           // Agrega aquí todos los archivos que quieres cachear
         ]);
       })
