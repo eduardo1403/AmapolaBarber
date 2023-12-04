@@ -1,0 +1,27 @@
+{
+    "name": "Barberia Amapola",
+    "short_name": "Barber Amapola",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#212529",
+    "theme_color": "#212529",
+    "orientation": "portrait-primary",
+    "icons": [
+      {
+        "src": "/icons/maskable_icon_x72.png",
+        "type": "image/png", "sizes": "72x72"
+      },
+      {
+        "src": "/icons/maskable_icon_x96.png",
+        "type": "image/png", "sizes": "96x96"
+      },
+      {
+        "src": "/icons/maskable_icon_x128.png",
+        "type": "image/png","sizes": "128x128"
+      },
+      {
+        "src": "/icons/maskable_icon_x512.png",
+        "type": "image/png", "sizes": "512x512"
+      }
+    ]
+  }
