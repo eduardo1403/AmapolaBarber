@@ -13,3 +13,7 @@ self.addEventListener('sync', e=>{
     console.log(e);
     console.log(e.tag);
 })
+
+self.addEventListener('push', e=>{
+    console.log('Envio notificaciones con exito');
+})
