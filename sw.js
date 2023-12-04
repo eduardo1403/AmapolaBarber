@@ -57,3 +57,25 @@ self.addEventListener('push', (event) => {
       self.registration.showNotification('Hola!!', options)
     );
   });
+
+
+  function mostrarNoti() {
+    if (Notification.permission === 'granted') {
+        self.addEventListener('push', (event) => {
+            const options = {
+              body: 'Conoce los nuevos productos de la tienda',
+              icon: 'img/noti.jpg'
+            };
+          
+            event.waitUntil(
+              self.registration.showNotification('Nuevos Productos.!', options)
+            );
+          })
+      };
+  
+      notificacion.addEventListener('click', () => {
+        // Acción cuando el usuario hace clic en la notificación
+        console.log('El usuario hizo clic en la notificación');
+      });
+    }
+  
