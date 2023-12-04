@@ -7,3 +7,9 @@ self.addEventListener('install', e=>{
 self.addEventListener('activate', e=>{
     console.log('SW: Activo y Controlara toda la aplicación');
 })
+
+self.addEventListener('sync', e=>{
+    console.log('Tenemos conexión');
+    console.log(e);
+    console.log(e.tag);
+})
