@@ -14,6 +14,13 @@ self.addEventListener('sync', e=>{
     console.log(e.tag);
 })
 
-self.addEventListener('push', e=>{
-    console.log('Envio notificaciones con exito');
-})
+self.addEventListener('push', (event) => {
+    const options = {
+      body: 'Bienvenido a Barberia Amapola',
+      icon: 'img/noti.jpg'
+    };
+  
+    event.waitUntil(
+      self.registration.showNotification('Hola!!', options)
+    );
+  });
