@@ -3,6 +3,38 @@ self.addEventListener('install', e=>{
     console.log('Instalando SW');
 })
 
+self.addEventListener('install', (event) => {
+    event.waitUntil(
+      caches.open('mi-pwa-cache').then((cache) => {
+        return cache.addAll([
+          '/',
+          '/index.html',
+          '/css/acerca.css',
+          '/css/index.css',
+          '/img/banner.jpg',
+          '/img/logo.png',
+          '/img/noti.jpg',
+          '/img/presentacion1.jpg',
+          '/img/presentacion2.jpg',
+          '/views/acerca.html',
+          '/views/login.html',
+          '/views/registro.html',
+          '/views/productos.html',
+          '/views/politicas.html',
+          // Agrega aquí todos los archivos que quieres cachear
+        ]);
+      })
+    );
+  });
+
+
+  self.addEventListener('fetch', (event) => {
+    event.respondWith(
+      caches.match(event.request).then((response) => {
+        return response || fetch(event.request);
+      })
+    );  
+  });
 
 self.addEventListener('activate', e=>{
     console.log('SW: Activo y Controlara toda la aplicación');
