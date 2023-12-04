@@ -1,1 +1,4 @@
-console.log('Podemos utilizar SW')
+
+self.addEventListener('install', e=>{
+    console.log('Instalando SW')
+})
